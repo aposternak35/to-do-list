@@ -5,10 +5,11 @@ public enum Permission {
     DEVELOPERS_WRITE("developers.write");
     private final String permission;
 
-    Permission(String permisssion){
-        this.permission=permisssion;
+    Permission(String permisssion) {
+        this.permission = permisssion;
     }
-    public String getPermission(){
-        return  permission;
+
+    public String getPermission() {
+        return permission;
     }
 }

@@ -18,11 +18,11 @@ public class SecurityUser implements UserDetails {
     private final List<SimpleGrantedAuthority> authorities;
     private final boolean isActive;
 
-    public SecurityUser(String username,String password, List<SimpleGrantedAuthority> authorities,boolean isActive){
-        this.username=username;
-        this.password=password;
-        this.authorities=authorities;
-        this.isActive=isActive;
+    public SecurityUser(String username, String password, List<SimpleGrantedAuthority> authorities, boolean isActive) {
+        this.username = username;
+        this.password = password;
+        this.authorities = authorities;
+        this.isActive = isActive;
     }
 
     @Override
@@ -60,8 +60,8 @@ public class SecurityUser implements UserDetails {
         return isActive;
     }
 
-    public static UserDetails fromUser(User user){
-        return new  org.springframework.security.core.userdetails.User(
+    public static UserDetails fromUser(User user) {
+        return new org.springframework.security.core.userdetails.User(
                 user.getEmail(), user.getPassword(),
                 user.getStatus().equals(Status.ACTIVE),
                 user.getStatus().equals(Status.ACTIVE),
